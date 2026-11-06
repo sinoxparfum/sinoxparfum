@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sinox Parfum | الكتالوج الشامل لجميع العطور والتخفيضات</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            light: '#F3E5AB',
+                            dark: '#AA7C11',
+                        },
+                        darkBg: '#0A0A0A',
+                        cardBg: '#141414',
+                    },
+                    fontFamily: {
+                        tajawal: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #0A0A0A;
+            color: #E5E7EB;
+        }
+        .luxury-gradient {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+        .luxury-text-gradient {
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .luxury-button {
+            background: linear-gradient(135deg, #BF953F 0%, #AA771C 100%);
+            color: #000;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        .luxury-button:hover {
+            background: linear-gradient(135deg, #FCF6BA 0%, #BF953F 100%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 min-h-screen flex flex-col selection:bg-gold selection:text-black">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center bg-gold/10 text-gold font-bold text-xl">
+                    S
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-wider luxury-text-gradient">sinox Parfum</span>
+                    <span class="block text-[10px] text-gold/70 tracking-widest uppercase">VIP Luxury Collection</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8 space-x-reverse text-sm font-medium">
+                <a href="#catalog" class="text-gold hover:text-gold-light transition">الرئيسية</a>
+                <a href="#catalog" onclick="filterCategory('men')" class="text-gray-300 hover:text-gold transition">عطور رجالية</a>
+                <a href="#catalog" onclick="filterCategory('women')" class="text-gray-300 hover:text-gold transition">عطور نسائية</a>
+                <a href="#catalog" onclick="filterCategory('unisex')" class="text-gray-300 hover:text-gold transition">عطور للجنسين</a>
+                <a href="#trust" class="text-gray-300 hover:text-gold transition">الأصالة والترخيص</a>
+            </nav>
+
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <button onclick="openCartModal()" class="relative p-2 text-gold hover:text-white transition">
+                    <i class="fa-solid fa-bag-shopping text-xl"></i>
+                    <span id="cart-counter" class="absolute -top-1 -right-1 bg-gold text-black text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                </button>
+                <a href="https://wa.me/212778794111?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20عطور%20sinox%20Parfum" target="_blank" class="hidden sm:flex items-center space-x-2 space-x-reverse px-4 py-2 rounded-xl border border-gold/40 text-gold hover:bg-gold/10 transition text-sm font-semibold">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>0778794111</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-darkBg via-cardBg to-darkBg text-center">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <span class="px-4 py-1.5 rounded-full border border-gold/30 bg-gold/10 text-gold text-xs font-semibold tracking-widest uppercase mb-6 inline-block">
+                🚚 التشكيلة الكاملة للعطور • خصومات حصرية (التوصيل: 30 درهم)
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-black mb-6 tracking-tight">
+                كتالوج <span class="luxury-text-gradient">sinox Parfum</span> الشامل
+            </h1>
+            <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+                جميع عطور لطافة، أرض الزعفران، والإصدارات الخاصة متاحة الآن بتخفيضات مميزة وتوصيل سريع لكافة المدن.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#catalog" class="px-8 py-4 rounded-xl luxury-button font-bold text-black text-base shadow-lg shadow-gold/20 flex items-center space-x-2 space-x-reverse">
+                    <i class="fa-solid fa-gem ml-2"></i> استعرض كافة العطور
+                </a>
+                <a href="https://wa.me/212778794111?text=مرحباً،%20أرغب%20في%20طلب%20استشارة%20خاصة%20لاختيار%20عطر." target="_blank" class="px-8 py-4 rounded-xl border border-gold/40 text-gold hover:bg-gold/10 font-bold text-base transition flex items-center space-x-2 space-x-reverse">
+                    <i class="fa-brands fa-whatsapp ml-2 text-xl"></i> تواصل عبر الواتساب
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter Bar -->
+    <section class="sticky top-20 z-40 bg-darkBg/95 backdrop-blur py-4 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="relative w-full md:w-96">
+                <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input type="text" id="search-input" oninput="filterPerfumes()" placeholder="ابحث في جميع العطور..." class="w-full bg-cardBg border border-white/10 rounded-xl pr-12 pl-4 py-3 text-sm focus:outline-none focus:border-gold transition">
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-2 w-full md:w-auto">
+                <button onclick="filterCategory('all')" id="btn-all" class="category-btn px-5 py-2 rounded-xl text-xs font-bold transition bg-gold text-black">جميع العطور</button>
+                <button onclick="filterCategory('men')" id="btn-men" class="category-btn px-5 py-2 rounded-xl text-xs font-bold transition bg-cardBg text-gray-300 border border-white/10 hover:border-gold">عطور رجالية</button>
+                <button onclick="filterCategory('women')" id="btn-women" class="category-btn px-5 py-2 rounded-xl text-xs font-bold transition bg-cardBg text-gray-300 border border-white/10 hover:border-gold">عطور نسائية</button>
+                <button onclick="filterCategory('unisex')" id="btn-unisex" class="category-btn px-5 py-2 rounded-xl text-xs font-bold transition bg-cardBg text-gray-300 border border-white/10 hover:border-gold">عطور للجنسين</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Catalog Section -->
+    <main id="catalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-grow w-full">
+        <div class="flex justify-between items-center mb-8">
+            <div>
+                <h2 class="text-2xl font-bold">القائمة الكاملة لجميع العطور</h2>
+                <p class="text-sm text-gray-400 mt-1">تشمل كافة عطور لطافة وأرض الزعفران والرشاشات بتخفيضات حصرية</p>
+            </div>
+            <span id="results-count" class="text-xs text-gold bg-gold/10 px-3 py-1 rounded-lg border border-gold/20">جاري التحميل...</span>
+        </div>
+
+        <div id="perfumes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Data Populated by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Official Stamp Footer -->
+    <footer id="trust" class="bg-black border-t border-gold/20 py-12 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full border-2 border-gold flex items-center justify-center bg-gold/10 text-gold text-2xl">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4 class="text-2xl font-black luxury-text-gradient mb-3">عطور إماراتية أصلية 100/100 رسمياً</h4>
+            <p class="text-sm text-gray-400 max-w-xl mx-auto mb-6">
+                ثمن التوصيل 30 درهم لجميع المدن المغربية.
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-6 text-sm text-gold font-semibold mb-8">
+                <span class="flex items-center"><i class="fa-solid fa-circle-check ml-2"></i> 100% أصلي</span>
+                <span class="flex items-center"><i class="fa-solid fa-truck-fast ml-2"></i> توصيل 30 د.م</span>
+                <span class="flex items-center"><i class="fa-solid fa-headset ml-2"></i> الطلب عبر الواتساب: 0778794111</span>
+            </div>
+            <div class="pt-6 border-t border-white/10 text-xs text-gray-500">
+                &copy; 2026 sinox Parfum. جميع الحقوق محفوظة.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex justify-end">
+        <div class="w-full max-w-md bg-cardBg h-full border-l border-gold/20 p-6 flex flex-col shadow-2xl">
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                <h3 class="text-lg font-bold text-gold flex items-center">
+                    <i class="fa-solid fa-bag-shopping ml-2"></i> سلة التسوق
+                </h3>
+                <button onclick="closeCartModal()" class="text-gray-400 hover:text-white p-2">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            <div id="cart-items-container" class="flex-grow overflow-y-auto py-4 space-y-4">
+                <!-- Cart Content -->
+            </div>
+            <div class="pt-4 border-t border-white/10 space-y-2">
+                <div class="flex justify-between items-center text-sm text-gray-400">
+                    <span>مجموع العطور:</span>
+                    <span id="cart-subtotal">0 د.م</span>
+                </div>
+                <div class="flex justify-between items-center text-sm text-gray-400">
+                    <span>ثمن التوصيل:</span>
+                    <span class="text-gold">30 د.م</span>
+                </div>
+                <div class="flex justify-between items-center text-base font-bold pt-2 border-t border-white/10">
+                    <span>المجموع الإجمالي:</span>
+                    <span id="cart-total" class="text-gold">30 د.م</span>
+                </div>
+                <button onclick="checkoutWhatsApp()" class="w-full mt-4 py-4 rounded-xl luxury-button font-bold text-black text-base flex items-center justify-center space-x-2 space-x-reverse">
+                    <i class="fa-brands fa-whatsapp text-xl ml-2"></i>
+                    <span>إرسال الطلب عبر الواتساب</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Data & Functions -->
+    <script>
+        // جميع العطور (أكثر من 100 عطر شاملة لطافة، أرض الزعفران، والرشاشات)
+        const basePerfumes = [
+            { id: 1, name: "LATTAFA KHAMRAH QAHWA", company: "Lattafa", category: "unisex", volume: "100ml", price: 220, tag: "أكثر طلباً", image: "https://fimgs.net/mdimg/perfume/o.88175.jpg" },
+            { id: 2, name: "LATTAFA KHAMRAH", company: "Lattafa", category: "unisex", volume: "100ml", price: 220, tag: "أكثر شهرة", image: "https://m.media-amazon.com/images/I/61lIaaNDDqL.jpg" },
+            { id: 3, name: "LATTAFA ASAD", company: "Lattafa", category: "men", volume: "100ml", price: 180, tag: "أكثر طلباً", image: "https://m.media-amazon.com/images/I/61djyqRmekL.jpg" },
+            { id: 4, name: "LATTAFA ECLAIRE", company: "Lattafa", category: "women", volume: "100ml", price: 200, tag: "إصدار محدود", image: "https://www.news-parfums.com/63294-large_default/asad-eau-de-parfum.jpg" },
+            { id: 5, name: "HAWAS EAU DE PARFUM", company: "Rasasi / Lattafa", category: "men", volume: "100ml", price: 300, tag: "عالي الثبات", image: "https://m.media-amazon.com/images/I/51h+3KRCLiL.jpg" },
+            { id: 6, name: "LATTAFA YARA", company: "Lattafa", category: "women", volume: "100ml", price: 150, tag: "نسائي", image: "https://www.lattafa-usa.com/cdn/shop/files/1_7682153c-2dce-4b60-a9e6-20557f8502cf.png?v=1747500015&width=1500" },
+            { id: 7, name: "SPRAY TERIAQ", company: "Lattafa", category: "unisex", volume: "100ml", price: 220, tag: "Spray", image: "https://orientaldream.b-cdn.net/15099-large_default/lattafa-teriaq-body-spray-200ml.jpg" },
+            { id: 8, name: "SPRAY HIS CONFESSION", company: "Lattafa", category: "men", volume: "100ml", price: 220, tag: "Spray", image: "https://cdn.shopify.com/s/files/1/0958/5809/8515/files/e04d99ee1ebd74b8069de8f25edd89c4.webp?v=1776698208" },
+            { id: 9, name: "LATTAFA FAKHAR LATTAFA MAN", company: "Lattafa", category: "men", volume: "100ml", price: 200, tag: "رجالي", image: "https://static.sweetcare.com/img/prd/488/v-639214390552804584/lattafa-028901l2_01.webp" },
+            { id: 10, name: "LATTAFA QAED AL FURSAN", company: "Lattafa", category: "unisex", volume: "90ml", price: 150, tag: "للجنسين", image: "https://m.media-amazon.com/images/I/61djyqRmekL.jpg" },
+            { id: 11, name: "SPRAY HAYAATI FLORENCE", company: "Lattafa", category: "women", volume: "100ml", price: 130, tag: "Spray", image: "https://labelleperfumes.com/cdn/shop/files/Hayati-Florence-Perfumed-Spray-200-ml-For-Women-by-Lattafa-2_800x.jpg?v=1762276929" },
+            { id: 12, name: "SPRAY QAED AL FURSAN UNTAMED", company: "Lattafa", category: "unisex", volume: "90ml", price: 120, tag: "Spray", image: "https://m.media-amazon.com/images/I/6156RtChnKL.jpg" },
+            { id: 13, name: "SPRAY MAAHIR BLACK EDITION", company: "Lattafa", category: "men", volume: "100ml", price: 200, tag: "Spray", image: "https://eg.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/98/1129031/1.jpg?9488" },
+            { id: 14, name: "SPRAY ANA ABIYEDH ROUGE", company: "Lattafa", category: "unisex", volume: "60ml", price: 139, tag: "Spray", image: "https://cdn11.bigcommerce.com/s-d75m9rit2s/images/stencil/1280x1280/products/22655/4468773/6290360593227__85553.1774926496.jpg?c=1" },
+            { id: 15, name: "SPRAY GIVE ME GOURMAND - VANILLA FREAK", company: "Lattafa", category: "women", volume: "75ml", price: 150, tag: "Spray", image: "https://cdnx.jumpseller.com/de-remate-outlet/image/79029112/IMG_9853.png?1784745497" },
+            { id: 16, name: "SPRAY HAYAATI GOLD ELIXIR", company: "Lattafa", category: "unisex", volume: "100ml", price: 130, tag: "Spray", image: "https://media.falabella.com/falabellaCL/153073655_01/w=1500,h=1500,fit=cover" },
+            { id: 17, name: "SPRAY SER AL KHULOOD BROWN", company: "Lattafa", category: "unisex", volume: "100ml", price: 120, tag: "Spray", image: "https://euphoria-perfumery.com/wp-content/uploads/2025/02/deosprej-lattafa-ser-al-khulood-brown-250ml-65b79d9a644df_1280x1280.jpeg" },
+            { id: 18, name: "SPRAY MUSAMAM WHITE INTENSE", company: "Lattafa", category: "unisex", volume: "100ml", price: 220, tag: "Spray", image: "https://www.perfumesandreawholesale.com/cdn/shop/files/I13139_22bce6ee-3eca-48e9-b63b-ea88c895fbc7.jpg?v=1782396157" },
+            { id: 19, name: "SPRAY BADEE AL OUD AMETHYST", company: "Lattafa", category: "unisex", volume: "100ml", price: 200, tag: "Spray", image: "https://m.media-amazon.com/images/I/71BE3wKjWyL.jpg" },
+            { id: 20, name: "SPRAY OUD MOOD REMINISCENCE", company: "Lattafa", category: "unisex", volume: "100ml", price: 130, tag: "Spray", image: "https://i.ebayimg.com/thumbs/images/g/PpEAAeSwcehoZCnt/s-l500.jpg" },
+            { id: 21, name: "SPRAY SEHR LATTAFA", company: "Lattafa", category: "unisex", volume: "100ml", price: 200, tag: "Spray", image: "https://www.lattafa-usa.com/cdn/shop/files/1_561e309c-f563-4974-8460-a20980e98865.png?v=1756362148" },
+            { id: 22, name: "SPRAY OUD MOOD ELIXIR", company: "Lattafa", category: "unisex", volume: "100ml", price: 130, tag: "Spray", image: "https://m.media-amazon.com/images/I/71F0dUGS7dL.jpg" },
+            { id: 23, name: "SPRAY THE KINGDOM WOMEN", company: "Lattafa", category: "women", volume: "100ml", price: 150, tag: "Spray", image: "https://www.jesaida.lt/images/uploader/la/388x388.g/lattafa-the-kingdom-for-women-dezodorantas-1.png?v=1790159272" },
+            { id: 24, name: "SPRAY ECLAIRE", company: "Lattafa", category: "women", volume: "100ml", price: 200, tag: "Spray", image: "https://cdn11.bigcommerce.com/s-d75m9rit2s/images/stencil/1280x1280/products/21786/4040523/eclaire_body_spray__07064.1761266161.jpg?c=1" },
+            { id: 25, name: "SPRAY ROUAT AL OUD", company: "Lattafa", category: "unisex", volume: "100ml", price: 130, tag: "Spray", image: "https://beautyhouse.com/cdn/shop/files/01scrtzici.png?v=1723931635&width=1600" },
+            { id: 26, name: "SPRAY GIVE ME GOURMAND - MALLOW MADNESS", company: "Lattafa", category: "women", volume: "75ml", price: 150, tag: "Spray", image: "https://cdnx.jumpseller.com/de-remate-outlet/image/79046692/resize/480/480?1784762759" },
+            { id: 27, name: "SPRAY JASOOR", company: "Lattafa", category: "men", volume: "100ml", price: 150, tag: "Spray", image: "https://www.csigrocery.com/wp-content/uploads/2026/07/House-of-Kinz-London-Jasoor-Perfume-Body-Spray.png" },
+            { id: 28, name: "SPRAY HAYAATIM", company: "Lattafa", category: "unisex", volume: "100ml", price: 130, tag: "Spray", image: "https://i5.walmartimages.com/asr/128a0147-8755-499a-b6e8-6698fea4b3b6.da8a7eabcd6270a5418dfc2e674f42d4.png" },
+            { id: 29, name: "SPRAY ECLAIRE PISTACHE", company: "Lattafa", category: "women", volume: "100ml", price: 200, tag: "Spray", image: "https://down-br.img.susercontent.com/file/br-11134207-820l4-mod55hrpgetiab" },
+            { id: 30, name: "SPRAY FAKHAR LATTAFA EXTRAIT", company: "Lattafa", category: "unisex", volume: "100ml", price: 220, tag: "Spray", image: "https://www.intenseoud.com/cdn/shop/files/1_89d670d4-6ab2-4a63-8cd5-2390753a165e.webp?v=1774785701" },
+            { id: 31, name: "SPRAY MUSK MOOD", company: "Lattafa", category: "unisex", volume: "100ml", price: 130, tag: "Spray", image: "https://down-my.img.susercontent.com/file/my-11134207-7rasf-m53veyiovyso53" },
+            { id: 32, name: "SPRAY ANA ABIYEDH SCARLET", company: "Lattafa", category: "women", volume: "60ml", price: 130, tag: "Spray", image: "https://www.intenseoud.com/cdn/shop/files/lattafa-ana-abiyedh-rouge-body-mist-150ml-image-1_grande.webp?v=1793645911" },
+            { id: 33, name: "SPRAY EMAAN", company: "Lattafa", category: "unisex", volume: "100ml", price: 180, tag: "Spray", image: "https://www.jesaida.lt/images/uploader/pu/388x388.g/purskiamas-namu-kvapas-lattafa-emaan-1.png?v=1775057686" },
+            { id: 34, name: "SPRAY MISHLAH", company: "Lattafa", category: "men", volume: "100ml", price: 150, tag: "Spray", image: "https://i5.walmartimages.com/seo/Mishlah-by-Lattafa-3-4-oz-EDP-Spray-for-Unisex_2b92872b-ffda-4ec4-ad24-34a7de8f6e61.0158196dad81c1244a98ff0b34038fd1.jpeg" },
+            { id: 35, name: "SPRAY MAAHIR", company: "Lattafa", category: "men", volume: "100ml", price: 180, tag: "Spray", image: "https://www.black-elixir.com/cdn/shop/files/white-photoroom-28png-13059.png?v=1789509954" },
+            { id: 36, name: "SPRAY AJWAD PINK TO PINK", company: "Lattafa", category: "women", volume: "60ml", price: 140, tag: "Spray", image: "https://cdn.atacadoconnect.com/produtos/1313758/desodorante-lattafa-ajwad-pink-to-pink-feminino-200ml-1313758-43254.jpg" },
+            { id: 37, name: "SPRAY VELVET ROSE", company: "Lattafa", category: "women", volume: "100ml", price: 130, tag: "Spray", image: "https://witr.com.au/cdn/shop/files/Velvet-Rose.jpg?v=1755498009&width=2048" },
+            { id: 38, name: "SPRAY RAMZ LATTAFA GOLD", company: "Lattafa", category: "unisex", volume: "100ml", price: 120, tag: "Spray", image: "https://haramaineg.com/cdn/shop/files/B110FA12-F0E4-4A58-9AB2-862346D9B96A.webp?v=1779093948" },
+            { id: 39, name: "SPRAY OPULENT MUSK", company: "Lattafa", category: "unisex", volume: "100ml", price: 130, tag: "Spray", image: "https://m.media-amazon.com/images/I/61IT+EgQ0-L._AC_UL450_SY450_QL70_.jpg" },
+            { id: 40, name: "SPRAY HAYA", company: "Lattafa", category: "women", volume: "100ml", price: 180, tag: "Spray", image: "https://www.lattafa-usa.com/cdn/shop/files/1_8cd4cfe9-d5fc-4fe9-ad9d-a994b798957f.png?v=1756361835" },
+            { id: 41, name: "SPRAY RANEEN", company: "Lattafa", category: "women", volume: "80ml", price: 140, tag: "Spray", image: "https://www.intenseoud.com/cdn/shop/files/1_1361a825-bc3c-4b0f-a24d-a8ff766840cc.webp?v=1774796397" },
+            { id: 42, name: "SPRAY AL NOBLE AMEER", company: "Lattafa", category: "men", volume: "100ml", price: 140, tag: "Spray", image: "https://m.media-amazon.com/images/I/61KH-il8uoL.jpg" },
+            { id: 43, name: "SPRAY DYNASTY", company: "Lattafa", category: "unisex", volume: "100ml", price: 160, tag: "Spray", image: "https://www.timesperfumes.com.au/cdn/shop/files/Dynasty-Perfume-Spray-Box.webp?v=1776928434&width=1946" },
+            { id: 44, name: "SPRAY AL DUR AL MAKNOON SILVER", company: "Lattafa", category: "men", volume: "100ml", price: 120, tag: "Spray", image: "https://www.lattafa-usa.com/cdn/shop/files/2_be9768af-d076-4638-990a-464839422bda.png?v=1747500337&width=1500" },
+            { id: 45, name: "SPRAY AL NASHAMA CAPRICE", company: "Lattafa", category: "men", volume: "100ml", price: 180, tag: "Spray", image: "https://content.roman.co.uk/images/original/19be4fc4865a4c53932fb4907ebd0fe4.jpg" },
+            { id: 46, name: "SPRAY NAJDIA INTENSE", company: "Lattafa", category: "men", volume: "100ml", price: 120, tag: "Spray", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCsQXHkDOSoZn9qkkoCD_F0fn3vpTWfFnS_D8JduxIBg&s=10" },
+            { id: 47, name: "SPRAY MAYAR CHERRY INTENSE", company: "Lattafa", category: "women", volume: "100ml", price: 150, tag: "Spray", image: "https://www.lattafa-usa.com/cdn/shop/files/1_a400747a-6731-4eec-b41c-79b2e209a7fc.png?v=1756361945" },
+            { id: 48, name: "SPRAY EMEER", company: "Lattafa", category: "men", volume: "100ml", price: 200, tag: "Spray", image: "https://m.media-amazon.com/images/I/71M+5Ea5GnL._AC_UF894,1000_QL80_.jpg" },
+            { id: 49, name: "SPRAY ECLAIRE BANOFFI", company: "Lattafa", category: "women", volume: "100ml", price: 200, tag: "Spray", image: "https://m.media-amazon.com/images/I/81WBm7Mgd-L._AC_UF1000,1000_QL80_.jpg" },
+            { id: 50, name: "SPRAY PETRA", company: "Lattafa", category: "unisex", volume: "100ml", price: 180, tag: "Spray", image: "https://m.media-amazon.com/images/I/71A-wx-XneL.jpg" },
+            { id: 51, name: "SPRAY KHAMRAH DUKHAN", company: "Lattafa", category: "unisex", volume: "100ml", price: 220, tag: "Spray", image: "https://m.media-amazon.com/images/I/61+ovPZurSL._AC_UF1000,1000_QL80_.jpg" },
+            { id: 52, name: "SPRAY YARA TOUS", company: "Lattafa", category: "women", volume: "100ml", price: 150, tag: "Spray", image: "https://i5.walmartimages.com/asr/b1f1cbee-765a-48b5-ada3-103b1f7e80ae.1e26ceb461151fa649eb8c23aa7e7f7a.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" },
+            { id: 53, name: "SPRAY BADEE AL OUD SUBLIME", company: "Lattafa", category: "unisex", volume: "100ml", price: 200, tag: "Spray", image: "https://arabicparfums.com/cdn/shop/files/Badee-Al-Oud-Sublime-All-Over-Spray-150ml-Lattafa-174058523.webp?v=1771080214&width=800" },
+            { id: 54, name: "SPRAY ATLAS", company: "Lattafa", category: "men", volume: "55ml", price: 160, tag: "Spray", image: "https://m.media-amazon.com/images/I/81I4UPiKbZL.jpg" },
+            { id: 55, name: "SPRAY ASAD BOURBON", company: "Lattafa", category: "men", volume: "100ml", price: 190, tag: "Spray", image: "https://beautizone.co.uk/cdn/shop/files/lattafa-asad-bourbon-perfumed-spray-200ml-4635468.jpg?v=1765193952&width=800" },
+            { id: 56, name: "SPRAY QAED AL FURSAN UNLIMITED", company: "Lattafa", category: "unisex", volume: "90ml", price: 130, tag: "Spray", image: "https://wholesale.intenseoud.com/cdn/shop/files/7_e535ac2a-26ea-4cb0-8139-dc7aa69ce518.webp?v=1761244101" },
+            { id: 57, name: "SPRAY MAYAR", company: "Lattafa", category: "women", volume: "100ml", price: 150, tag: "Spray", image: "https://m.media-amazon.com/images/I/41qnUGHqLxL.jpg" },
+            { id: 58, name: "SPRAY KHAMRAH QAHWA", company: "Lattafa", category: "unisex", volume: "100ml", price: 220, tag: "Spray", image: "https://www.myroyalmusk.com/cdn/shop/files/qahwabodyspray1.png?v=1787260433&width=1000" },
+            { id: 59, name: "SPRAY ASAD", company: "Lattafa", category: "men", volume: "100ml", price: 180, tag: "Spray", image: "https://orientaldream.b-cdn.net/5858-large_default/lattafa-asad-body-spray-200ml.jpg" },
+            { id: 60, name: "SPRAY FAKHAR LATTAFA WOMEN", company: "Lattafa", category: "women", volume: "100ml", price: 200, tag: "Spray", image: "https://www.lattafa-usa.com/cdn/shop/files/1_af32bb0d-d475-465a-a525-5eda47c548d3.png?v=1756361633" },
+            { id: 61, name: "SPRAY OUD MOOD", company: "Lattafa", category: "unisex", volume: "100ml", price: 130, tag: "Spray", image: "https://becool.ma/wp-content/uploads/2025/05/Oud-Mood-Perfumed-Body-Spray-200ml-by-Lattafa-.webp" },
+            { id: 62, name: "SPRAY CONFIDENTIAL PRIVATE GOLD", company: "Lattafa", category: "unisex", volume: "100ml", price: 150, tag: "Spray", image: "https://i5.walmartimages.com/seo/Lattafa-Unisex-Confidential-Private-Gold-EDP-Spray-3-38-oz-Fragrances-6291107459707_8b6e979a-c4f7-4847-aeb4-8d1b6945c313.1fc51f4b31f4492f17f0fcda397a42f3.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" },
+            { id: 63, name: "SPRAY HAYAATI AL MALCKY", company: "Lattafa", category: "men", volume: "100ml", price: 130, tag: "Spray", image: "https://static.wixstatic.com/media/53325f_1dd2ead39fe5420fa666d1c2f4e5802a~mv2.jpg/v1/fill/w_480,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/53325f_1dd2ead39fe5420fa666d1c2f4e5802a~mv2.jpg" },
+            { id: 64, name: "SPRAY AMEERAT AL ARAB PRIVE ROSE", company: "Lattafa", category: "women", volume: "100ml", price: 150, tag: "Spray", image: "https://i5.walmartimages.com/asr/6dc80fdd-c97d-4b8f-bd04-7bd753f825f5.3b8887fb789b76d57e74a0ca6faa3e7c.jpeg" },
+            { id: 65, name: "SPRAY NASAMAAT", company: "Lattafa", category: "unisex", volume: "100ml", price: 140, tag: "Spray", image: "https://oudlash.com/cdn/shop/files/Nasamaat-Bottle-copy-scaled.webp?v=1773169638" },
+            { id: 66, name: "SPRAY FIRE ON ICE", company: "Lattafa", category: "men", volume: "110ml", price: 160, tag: "Spray", image: "https://www.lattafa-usa.com/cdn/shop/files/1_cf2474fb-b1d3-4caf-9adc-86efcccaeb9d.png?v=1756361729" },
+            { id: 67, name: "SPRAY BADEE AL OUD HONOR AND GLORY", company: "Lattafa", category: "unisex", volume: "100ml", price: 200, tag: "Spray", image: "https://m.media-amazon.com/images/I/41VWSpE4SOL.jpg" },
+            { id: 68, name: "SPRAY KHAMRAH", company: "Lattafa", category: "unisex", volume: "100ml", price: 220, tag: "Spray", image: "https://static3.sabinacdn.com/117437-thickbox_default/lattafa-khamrah-deodorant-spray.jpg" },
+            { id: 69, name: "ARD AL ZAAFARAN SUMMER FOREVER", company: "Ard Al Zaafaran", category: "unisex", volume: "100ml", price: 150, tag: "أرض الزعفران", image: "https://arabicparfums.com/cdn/shop/files/fc7139918b2c4d4f3ac0548d64cfd1c8-1_60d17f34-9a82-4336-bc9e-9dd9fe24d36a.jpg?v=1771071345&width=800" },
+            { id: 70, name: "ARD AL ZAAFARAN RAGHBA", company: "Ard Al Zaafaran", category: "unisex", volume: "50ml", price: 110, tag: "أرض الزعفران", image: "https://alrashad.com/cdn/shop/products/raghba_50ml-3_1024x.jpg?v=1668634394" },
+            { id: 71, name: "ARD AL ZAAFARAN BINT HOORAN", company: "Ard Al Zaafaran", category: "women", volume: "100ml", price: 140, tag: "أرض الزعفران", image: "https://ardalzaafaranshop.com/cdn/shop/files/ArdProductImages_38_1200x1200.png?v=1734402372" },
+            { id: 72, name: "ARD AL ZAAFARAN QAED AL FURSAN", company: "Ard Al Zaafaran", category: "men", volume: "50ml", price: 110, tag: "أرض الزعفران", image: "https://www.intenseoud.com/cdn/shop/files/ard-al-zaafaran-qaed-al-fursan-edp-50ml-bottle-front_grande.png?v=1793373869" },
+            { id: 73, name: "ARD AL ZAAFARAN ANA ABIYADH", company: "Ard Al Zaafaran", category: "unisex", volume: "50ml", price: 110, tag: "أرض الزعفران", image: "https://i.makeup.ae/u/uz/uzlh90v7lloi.jpg" },
+            { id: 74, name: "ARD AL ZAAFARAN OUD MOOD", company: "Ard Al Zaafaran", category: "unisex", volume: "50ml", price: 110, tag: "أرض الزعفران", image: "https://flora-parfums.com/wp-content/uploads/2025/04/280-LATTAFA-Ard-al-zaafaran-Oud-Mood-100ml.jpg" },
+            { id: 75, name: "ARD AL ZAAFARAN MOUSUF", company: "Ard Al Zaafaran", category: "unisex", volume: "50ml", price: 110, tag: "أرض الزعفران", image: "https://perfumesforlessng.com/cdn/shop/files/Ard-Al-Zaafaran-Mousuf-EDP-Unisex-Perfume.jpg?v=1788784719" },
+            { id: 76, name: "ARD AL ZAAFARAN HAREEM AL SULTAN", company: "Ard Al Zaafaran", category: "women", volume: "50ml", price: 110, tag: "أرض الزعفران", image: "https://www.ashleystewart.com/cdn/shop/files/ArdA57.jpg?v=1785338040" },
+            { id: 77, name: "ARD AL ZAAFARAN AMEERAT AL ARAB", company: "Ard Al Zaafaran", category: "women", volume: "50ml", price: 110, tag: "أرض الزعفران", image: "https://www.oriental-style.de/cdn/shop/files/a98728f05d829af1dbd034d7179b4421.png?v=1776705387&width=2048" },
+            { id: 78, name: "ARD AL ZAAFARAN TAJ AL MALIK", company: "Ard Al Zaafaran", category: "men", volume: "50ml", price: 110, tag: "أرض الزعفران", image: "https://orientaldream.b-cdn.net/12634-large_default/ard-al-zaafaran-taj-al-malik-edp-50ml.jpg" },
+            { id: 79, name: "ARD AL ZAAFARAN SHAMS AL EMARAT KHUSISI", company: "Ard Al Zaafaran", category: "unisex", volume: "50ml", price: 110, tag: "أرض الزعفران", image: "https://www.oriental-style.de/cdn/shop/files/ard-al-zaafran-shams-el-emarat-khususi-eau-de-parfum-100ml.webp?v=1779183263&width=3500" },
+            { id: 80, name: "ARD AL ZAAFARAN AL SAYAAD", company: "Ard Al Zaafaran", category: "men", volume: "50ml", price: 110, tag: "أرض الزعفران", image: "https://www.oriental-style.de/cdn/shop/files/900dd9a7cd559ea2be20c0a09f4df35d.png?v=1776701289&width=2048" },
+            { id: 81, name: "ARD AL ZAAFARAN YARA", company: "Ard Al Zaafaran", category: "women", volume: "50ml", price: 110, tag: "أرض الزعفران", image: "https://dinar.at/cdn/shop/files/ard-al-zaafaran-yara-eau-de-parfum-50ml-7269764.webp?v=1781684168" },
+            { id: 82, name: "ARD AL ZAAFARAN NAJDIA", company: "Ard Al Zaafaran", category: "men", volume: "50ml", price: 110, tag: "أرض الزعفران", image: "https://www.intenseoud.com/cdn/shop/files/ard-al-zaafaran-najdia-eau-de-parfum-50ml-bottle-front_grande.png?v=1792873382" },
+            { id: 83, name: "ARD AL ZAAFARAN HAWAS", company: "Ard Al Zaafaran", category: "men", volume: "100ml", price: 250, tag: "أرض الزعفران", image: "https://m.media-amazon.com/images/I/51h+3KRCLiL._AC_UL450_SY450_QL70_.jpg" },
+            { id: 84, name: "ARD AL ZAAFARAN YARA (PARFUMED SPRAY)", company: "Ard Al Zaafaran", category: "women", volume: "200ml", price: 90, tag: "أرض الزعفران", image: "https://wehitpan.com/cdn/shop/files/main.jpg?v=1754889471" },
+            { id: 85, name: "ARD AL ZAAFARAN SAFEER AL OUD", company: "Ard Al Zaafaran", category: "unisex", volume: "100ml", price: 130, tag: "أرض الزعفران", image: "https://beautyhouse.com/cdn/shop/files/01appjzbbz.png?v=1777582843&width=2048" },
+            { id: 86, name: "ARD AL ZAAFARAN SAHEB INTENSE", company: "Ard Al Zaafaran", category: "men", volume: "70ml", price: 140, tag: "أرض الزعفران", image: "https://arabicparfums.com/cdn/shop/files/saheb-intense-ard-al-zaafaran-eau-de-parfum-spray-70ml.webp?v=1775238455&width=800" },
+            { id: 87, name: "ARD AL ZAAFARAN YOUR TOUCH (EXTRAIT)", company: "Ard Al Zaafaran", category: "unisex", volume: "100ml", price: 160, tag: "أرض الزعفران", image: "https://arabicparfums.com/cdn/shop/files/1271A75D-50E1-46DB-B5FA-9A4E1E4A4CC8_3584x_8c89f9f1-d5a8-46cd-90f8-f6f09baf8255.webp?v=1773678242&width=800" },
+            { id: 88, name: "OUD 24 HOURS", company: "Ard Al Zaafaran", category: "unisex", volume: "100ml", price: 130, tag: "أرض الزعفران", image: "https://fimgs.net/mdimg/perfume/o.42090.jpg" },
+            { id: 89, name: "OPULENT DUBAI", company: "Ard Al Zaafaran", category: "unisex", volume: "100ml", price: 150, tag: "أرض الزعفران", image: "https://m.media-amazon.com/images/I/71C-fT7p56L.jpg" },
+            { id: 90, name: "LA VOIE", company: "Ard Al Zaafaran", category: "women", volume: "100ml", price: 140, tag: "أرض الزعفران", image: "https://xrmhpjisuinqkptymegm.supabase.co/storage/v1/object/public/product-images/1784225743330-nbavak60s6i.webp" },
+            { id: 91, name: "ARD AL ZAAFARAN FLORENZA", company: "Ard Al Zaafaran", category: "women", volume: "100ml", price: 130, tag: "أرض الزعفران", image: "https://orientaldream.b-cdn.net/12895-medium_default/maison-alhambra-florenza-edp-30ml.jpg" },
+            { id: 92, name: "ARD AL ZAAFARAN CERULEAN BLUE", company: "Ard Al Zaafaran", category: "men", volume: "100ml", price: 140, tag: "أرض الزعفران", image: "https://www.myperfumeshop.qa/cdn/shop/files/maison-alhambra-cerulean-blue-edp-932579.png?v=1741711565&width=2048" },
+            { id: 93, name: "ARD AL ZAAFARAN SHAMS RED OUD", company: "Ard Al Zaafaran", category: "unisex", volume: "100ml", price: 140, tag: "أرض الزعفران", image: "https://m.media-amazon.com/images/I/71xaIhqgN-L.jpg" },
+            { id: 94, name: "ARD AL ZAAFARAN SHERIF", company: "Ard Al Zaafaran", category: "men", volume: "100ml", price: 130, tag: "أرض الزعفران", image: "https://emiratesoud.co.uk/cdn/shop/files/Sherif-Perfume-100ml-EDP-Lattafa-176145151.jpg?v=1756744959&width=1946" },
+            { id: 95, name: "ARD AL ZAAFARAN NO.2 MEN", company: "Ard Al Zaafaran", category: "men", volume: "80ml", price: 120, tag: "أرض الزعفران", image: "https://perfumepalace.in/cdn/shop/products/24.png?v=1675457402" },
+            { id: 96, name: "AMAL EAU DE PARFUM", company: "Ard Al Zaafaran", category: "women", volume: "100ml", price: 130, tag: "أرض الزعفران", image: "https://cdn.50-ml.media/media/catalog/product/e/a/eau_de_moe_tariq_eau_de_parfum_1_2.jpg?fit=bounds&dpi=1&height=200&width=150" },
+            { id: 97, name: "LAIL MALAKI", company: "Ard Al Zaafaran", category: "unisex", volume: "100ml", price: 140, tag: "أرض الزعفران", image: "https://i.ebayimg.com/images/g/D6YAAOSw~t1hULrS/s-l1200.jpg" },
+            { id: 98, name: "MAISON ALHAMBRA L'IMPRESSIO", company: "Maison Alhambra", category: "men", volume: "100ml", price: 150, tag: "أرض الزعفران", image: "https://www.parfumarabia.lt/images/uploader/al/alhambra-limpressio-pour-femme-1.png" },
+            { id: 99, name: "TONIC ICE EAU DE PARFUM", company: "Ard Al Zaafaran", category: "men", volume: "100ml", price: 130, tag: "أرض الزعفران", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5KAjhp8w814SY3dOSFYns_Lcn6_TQLyts892LEq06IcrzPNvMJNMDZpQ&s=10" },
+            { id: 100, name: "LATTAFA ANA ABIYEDH POUDREE", company: "Lattafa", category: "unisex", volume: "60ml", price: 130, tag: "لطافة", image: "https://m.media-amazon.com/images/I/71vXlYHmlWL.jpg" },
+            { id: 101, name: "LATTAFA ANA ABIYEDH CORAL", company: "Lattafa", category: "women", volume: "60ml", price: 130, tag: "لطافة", image: "https://m.media-amazon.com/images/I/61aemRUTKRL._AC_UF1000,1000_QL80_.jpg" },
+            { id: 102, name: "LATTAFA EJAAZI FOR MEN", company: "Lattafa", category: "men", volume: "100ml", price: 150, tag: "لطافة", image: "https://www.oriental-style.de/cdn/shop/files/ejaazi-lattafa-eau-de-parfum-100ml-bergamotte-sandelholz.webp?v=1788254579&width=2048" },
+            { id: 103, name: "LATTAFA QIMMAH FOR WOMEN", company: "Lattafa", category: "women", volume: "100ml", price: 150, tag: "لطافة", image: "https://www.outletparfum.ca/cdn/shop/files/lattafaqimmah_orig03.jpg?v=1787868872" },
+            { id: 104, name: "LATTAFA ANGHAM", company: "Lattafa", category: "women", volume: "100ml", price: 200, tag: "لطافة", image: "https://www.lattafa-usa.com/cdn/shop/files/Angham-1_fea96331-1cd0-467d-be6d-56ad073a7f86.png?v=1747415391" },
+            { id: 105, name: "LATTAFA RAMZ LATTAFA", company: "Lattafa", category: "unisex", volume: "100ml", price: 120, tag: "لطافة", image: "https://www.lattafa-usa.com/cdn/shop/files/2_a95ae83a-bf54-472f-bfb5-ed6386b406c9.png?v=1747499087&width=1500" },
+            { id: 106, name: "RAVE NOW FOR MEN", company: "Rave", category: "men", volume: "100ml", price: 150, tag: "رايف", image: "https://zaoud.it/cdn/shop/files/rave-noe-for-men-perfume-bottle-surrounded-with-pineapple-and-lavender-shows-against-white-background.jpg?v=1717265695&width=1946" },
+            { id: 107, name: "RAVE NOW FOR WOMEN", company: "Rave", category: "women", volume: "100ml", price: 150, tag: "رايف", image: "https://service.buyflowers.ng/assets/untitled-design.zip---45__02__preview.png" },
+            { id: 108, name: "LATTAFA FAKHAR LATTAFA WOMEN", company: "Lattafa", category: "women", volume: "100ml", price: 200, tag: "لطافة", image: "https://www.lattafa-usa.com/cdn/shop/files/2_0de72c59-4763-4735-b1e7-d5086532f29d.png?v=1750614271&width=1500" },
+            { id: 109, name: "LATTAFA FAKHAR AL OUD", company: "Lattafa", category: "unisex", volume: "100ml", price: 200, tag: "لطافة", image: "https://www.oriental-style.de/cdn/shop/files/7d91f8bf91edcc6048b10749b12074db.png?v=1776702899&width=2048" },
+            { id: 110, name: "LATTAFA THE KINGDOM", company: "Lattafa", category: "men", volume: "100ml", price: 150, tag: "لطافة", image: "https://static3.sabinacdn.com/118348-thickbox_default/lattafa-the-kingdom-men-edp-100ml-men-fragrance.jpg" }
+        ];
+
+        const discountRates = [20, 25, 30];
+        const shippingFee = 30; // ثمن التوصيل الثابت
+
+        const perfumesData = basePerfumes.map((item, index) => {
+            const discountPercent = discountRates[index % discountRates.length];
+            const oldPrice = Math.round(item.price / (1 - (discountPercent / 100)));
+            return {
+                ...item,
+                oldPrice: oldPrice,
+                discount: discountPercent
+            };
+        });
+
+        let cart = [];
+        let currentFilter = 'all';
+        let searchQuery = '';
+
+        function renderPerfumes() {
+            const grid = document.getElementById('perfumes-grid');
+            const countLabel = document.getElementById('results-count');
+            
+            const filtered = perfumesData.filter(item => {
+                const matchesCategory = currentFilter === 'all' || item.category === currentFilter;
+                const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || item.company.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            countLabel.innerText = `عرض ${filtered.length} عطر`;
+
+            if(filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-16 text-gray-400">لا توجد عطور مطابقة لبحثك</div>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="luxury-gradient rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-gold transition duration-300 relative">
+                    <div class="relative h-64 overflow-hidden bg-black/40">
+                        <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 right-3 bg-red-600 text-white text-[11px] font-black px-2.5 py-1 rounded-md shadow flex items-center gap-1">
+                            <i class="fa-solid fa-tag"></i> خصم ${item.discount}%
+                        </span>
+                        <span class="absolute top-3 left-3 bg-gold text-black text-[10px] font-bold px-2.5 py-1 rounded-full shadow">
+                            ${item.tag}
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/70 backdrop-blur text-gold text-xs px-2.5 py-1 rounded-lg border border-gold/30">
+                            ${item.volume}
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <span class="text-[11px] text-gold uppercase tracking-wider block mb-1">${item.company}</span>
+                            <h3 class="text-base font-bold text-white mb-2 leading-snug">${item.name}</h3>
+                            <div class="text-xs text-gray-400 mb-2 flex items-center">
+                                <i class="fa-solid fa-truck text-gold ml-1.5"></i> التوصيل: 30 د.م
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-white/10 flex items-center justify-between mt-auto">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-400 line-through">${item.oldPrice} د.م</span>
+                                <span class="text-lg font-black text-gold">${item.price} د.م</span>
+                            </div>
+                            <div class="flex gap-2">
+                                <button onclick="addToCart(${item.id})" class="p-2.5 rounded-xl border border-gold/40 text-gold hover:bg-gold hover:text-black transition" title="إضافة للسلة">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </button>
+                                <button onclick="buyDirect(${item.id})" class="px-4 py-2.5 rounded-xl luxury-button text-xs font-bold flex items-center space-x-1.5 space-x-reverse">
+                                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                                    <span>طلب مباشر</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterCategory(cat) {
+            currentFilter = cat;
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('bg-gold', 'text-black');
+                btn.classList.add('bg-cardBg', 'text-gray-300', 'border', 'border-white/10');
+            });
+            const activeBtn = document.getElementById(`btn-${cat}`);
+            if(activeBtn) {
+                activeBtn.classList.remove('bg-cardBg', 'text-gray-300', 'border', 'border-white/10');
+                activeBtn.classList.add('bg-gold', 'text-black');
+            }
+            renderPerfumes();
+        }
+
+        function filterPerfumes() {
+            searchQuery = document.getElementById('search-input').value;
+            renderPerfumes();
+        }
+
+        function addToCart(id) {
+            const perfume = perfumesData.find(p => p.id === id);
+            const existing = cart.find(item => item.id === id);
+            if(existing) {
+                existing.qty++;
+            } else {
+                cart.push({...perfume, qty: 1});
+            }
+            updateCartUI();
+            openCartModal();
+        }
+
+        function updateCartUI() {
+            const counter = document.getElementById('cart-counter');
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            counter.innerText = totalItems;
+
+            const container = document.getElementById('cart-items-container');
+            const subtotalEl = document.getElementById('cart-subtotal');
+            const totalEl = document.getElementById('cart-total');
+
+            if(cart.length === 0) {
+                container.innerHTML = `<div class="text-center py-12 text-gray-500">سلة المشتريات فارغة</div>`;
+                subtotalEl.innerText = `0 د.م`;
+                totalEl.innerText = `0 د.م`;
+                return;
+            }
+
+            let subtotal = 0;
+            container.innerHTML = cart.map(item => {
+                subtotal += item.price * item.qty;
+                return `
+                    <div class="flex items-center justify-between bg-black/40 p-3 rounded-xl border border-white/5">
+                        <div class="flex items-center space-x-3 space-x-reverse">
+                            <img src="${item.image}" class="w-12 h-12 rounded-lg object-cover">
+                            <div>
+                                <h4 class="text-xs font-bold text-white">${item.name}</h4>
+                                <span class="text-xs text-gold">${item.price} د.م <span class="line-through text-gray-500 text-[10px] ml-1">${item.oldPrice} د.م</span></span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2 space-x-reverse">
+                            <button onclick="changeQty(${item.id}, -1)" class="w-7 h-7 rounded bg-white/10 text-white flex items-center justify-center">-</button>
+                            <span class="text-xs font-bold px-2">${item.qty}</span>
+                            <button onclick="changeQty(${item.id}, 1)" class="w-7 h-7 rounded bg-white/10 text-white flex items-center justify-center">+</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            const grandTotal = subtotal + shippingFee;
+            subtotalEl.innerText = `${subtotal} د.م`;
+            totalEl.innerText = `${grandTotal} د.م`;
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(p => p.id === id);
+            if(item) {
+                item.qty += delta;
+                if(item.qty <= 0) {
+                    cart = cart.filter(p => p.id !== id);
+                }
+            }
+            updateCartUI();
+        }
+
+        function openCartModal() {
+            document.getElementById('cart-modal').classList.remove('hidden');
+        }
+
+        function closeCartModal() {
+            document.getElementById('cart-modal').classList.add('hidden');
+        }
+
+        function buyDirect(id) {
+            const item = perfumesData.find(p => p.id === id);
+            const totalWithShipping = item.price + shippingFee;
+            const message = `مرحباً sinox Parfum، أود طلب العطر التالي:\n- ${item.name} (${item.volume})\n- السعر بعد الخصم (${item.discount}%): ${item.price} د.م\n- ثمن التوصيل: ${shippingFee} د.م\n- المجموع الإجمالي: ${totalWithShipping} د.م`;
+            window.open(`https://wa.me/212778794111?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        function checkoutWhatsApp() {
+            if(cart.length === 0) return;
+            let message = `مرحباً sinox Parfum، أود إتمام الطلب التالي:\n\n`;
+            let subtotal = 0;
+            cart.forEach(item => {
+                message += `▪️ ${item.name} (${item.volume}) x${item.qty} - ${item.price * item.qty} د.م\n`;
+                subtotal += item.price * item.qty;
+            });
+            const grandTotal = subtotal + shippingFee;
+            message += `\nمجموع العطور: ${subtotal} د.م\nثمن التوصيل: ${shippingFee} د.م\nالإجمالي الكلي: ${grandTotal} د.م\nعطور إماراتية أصلية رسمياً.`;
+            window.open(`https://wa.me/212778794111?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        // Initial Execution
+        renderPerfumes();
+    </script>
+</body>
+</html>
